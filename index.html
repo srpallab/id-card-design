@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Id Card Example With Tailwind CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+     tailwind.config = {
+       theme: {
+         extend: {
+           colors: {
+             cardbg: '#ff2e17',
+	     cardbgfrnt: '#c82618'
+           },
+	   width: {
+             '128': '28rem',
+	   },
+	   height: {
+	     '256': '48rem'
+	   }
+         }
+       }
+     }
+    </script>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen space-x-4">
+      <div class="w-128 border h-256 flex flex-col justify-between">
+	<header class="p-4 bg-cardbg flex justify-center items-center">
+	  <h1 class="text-white font-bold text-xl">INFORMATION OF CARD HOLDER</h1>
+	</header>
+	<main class="p-6">
+	  <ul class="py-4">
+	    <li>Date of Birth: 01-07-1995</li>
+	    <li>Blood Group:</li>
+	    <li>Aadhar Card No.: 8444978441541</li>
+	    <li>Contact No.: 9303103022</li>
+	    <li>Date of Issue: 20/02/2022</li>
+	    <li>Valid Till: 20/02/2023</li>
+	  </ul>
+	  <hr class="h-1 bg-black" />
+	  <p class="py-2">This card holder is an authorized person of apna Iakshya</p>
+	  <p class="py-2">This card is not transferable</p>
+	  <p class="py-2">Misuse of this card can cancle appointment</p>
+	  <p class="py-2">You are advised to serve the citizen of India</p>
+	  <p class="py-2">Please report if this card is lost return to the
+	    issuing authority or nearenst police station</p>
+	  <img class="mx-auto pt-2" alt="" src="./return.png"/>
+	</main>
+	<footer class="bg-cardbg p-4 text-sm text-center text-white">
+	  <p>Office: 305 Sector-A, Sarvadhram Sagar Homes-3, Kolar Road</p>
+	  <p>Bhopal (M.P.) 462042, 9685320585</p>
+	</footer>
+      </div>
+      <div class="w-128 border  h-256 flex flex-col justify-between">
+	<header class="p-4 bg-gradient-to-r from-cardbgfrnt to-cardbg 
+		       flex justify-center items-center">
+	  <h1 class="text-white font-bold text-xl">PRESS</h1>
+	</header>
+	<main class="w-full">
+	  <img class="mx-auto" alt="" src="./press-logo.png"/>
+	  <div class="flex justify-around font-bold">
+	    <h1>www.example.com</h1>
+	    <h1>Daily Newspapaer</h1>
+	  </div>
+	  <hr class="h-1 bg-black" />
+	  <div class="flex">
+	    <div class="w-20">
+	      <img class="h-96" alt="" src="./bar-code.png"/>
+	    </div>
+	    <div class="flex flex-col flex-grow items-center justify-around">
+	      <h1 class="font-bold text-xl">IDENTITY CARD</h1>
+	      <div class="relative">
+		<img class="w-40 h-40 border-solid border-4 border-gray-700 
+			    bg-cover rounded-tl-lg rounded-br-lg"
+		alt="" src="./pp.png" />
+		<img class="absolute -bottom-7 -right-7" alt="" src="./sing.png"/>
+	      </div>
+	      <h1 class="font-bold text-xl text-cardbg">HERO DHANUSH</h1>
+	      <h2>Sub Editor</h2>
+	      <h1>Working Area : M.P.</h1>
+	      <h1 class="font-bold text-xl">I Card No. AL/67389/306</h1>
+	    </div>
+	  </div>
+	</main>
+	<footer class="bg-gradient-to-r from-cardbgfrnt to-cardbg p-4 
+		       text-sm text-center text-white flex justify-between 
+		       items-center">
+	  <h1 class="text-white font-bold text-xl">PRESS</h1>
+	  <div class="flex flex-col justify-center items-center">
+	    <img class="h-16 w-16" alt="" src="./sing.png"/>
+	    <h4>Authority Signature</h4>
+	  </div>
+	</footer>
+      </div>
+    </div>
+  </body>
+</html>
